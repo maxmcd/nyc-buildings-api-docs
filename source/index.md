@@ -1,14 +1,13 @@
 ---
-title: API Reference
+title: NYC Buildings API
 
 language_tabs:
   - shell
   - ruby
-  - python
+  - go
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='https://gethaven.io'>Made by Haven</a>
 
 includes:
   - errors
@@ -18,13 +17,9 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the NYC DOB api
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
-# Authentication
+# Buildings
 
 > To authorize, use this code:
 
@@ -86,18 +81,18 @@ curl "http://example.com/api/kittens"
 ```json
 [
   {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+	"id": 1,
+	"name": "Fluffums",
+	"breed": "calico",
+	"fluffiness": 6,
+	"cuteness": 7
   },
   {
-    "id": 2,
-    "name": "Isis",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+	"id": 2,
+	"name": "Isis",
+	"breed": "unknown",
+	"fluffiness": 5,
+	"cuteness": 10
   }
 ]
 ```
