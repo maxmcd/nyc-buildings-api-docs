@@ -40,10 +40,10 @@ curl "/api/buildings/12345678"
 		"open": "0"
 	},
 	"violations": {
-	"dob_total": "50",
-	"dob_open": "2",
-	"ecb_total": "14",
-	"ecb_open": "4"
+		"dob_total": "50",
+		"dob_open": "2",
+		"ecb_total": "14",
+		"ecb_open": "4"
 	}
 }
 ```
