@@ -48,6 +48,5 @@ curl "/api/buildings/12345678"
 }
 ```
 
-Buildings are the primary resource for the NYC Buildings Api. They are queried using the BIN or Building Identification Number. If you don't have the BIN for the building you want to query, make sure to use the [helper endpoint](#helper).
-
+Buildings are the primary resource for the NYC Buildings Api. They are queried using the BIN or Building Identification Number. If you don't have the BIN for the building you want to query, make sure to use the [helper endpoint](#helper)
 

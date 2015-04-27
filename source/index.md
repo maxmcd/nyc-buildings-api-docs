@@ -12,6 +12,9 @@ toc_footers:
 includes:
   - helper
   - buildings
+  - complaints
+  - dob_violations
+  - ecb_violations
 
 search: true
 ---
