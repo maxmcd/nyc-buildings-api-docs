@@ -16,6 +16,8 @@ includes:
   - dob_violations
   - ecb_violations
 
+logo_link: "https://buildingsapi.nyc"
+
 search: true
 ---
 
