@@ -177,7 +177,89 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Buildings are the primary resource for the NYC Buildings Api. They are queried using the BIN or Building Identification Number. If you don&rsquo;t have the BIN for the building you want to query, make sure to use the <a href="#helper">helper endpoint</a>.</p>
+<p>Buildings are the primary resource for the NYC Buildings Api. They are queried using the BIN or Building Identification Number. If you don&rsquo;t have the BIN for the building you want to query, make sure to use the <a href="#helper">helper endpoint</a></p>
+
+          <h1 id="complaints">Complaints</h1>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre><code class="highlight plaintext">GET /api/complaints/{complaint_num}
+</code></pre>
+
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre><code class="highlight shell">curl <span class="s2">"/api/buildings/12345678/complaints"</span>
+</code></pre>
+
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">{</span><span class="w">
+    </span><span class="s2">"bin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3036607"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"complaint_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3058960"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"regarding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Re: ILLEGAL PLUMBING WORK IN BASEMENT/CELLAR"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66 PLUMBING WORK - ILLEGAL/NO PERMIT(ALSO SPRINKLER/STANDPIPE)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"assigned_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/01/1997 11:28"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 1374"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lot"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"community_board"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 308"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQ 74104 00000002257970"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_inspection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06/05/2003 - - BY BADGE # 3029"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06/06/2003 - I2 - NO VIOLATION WARRANTED FOR COMPLAINT AT TIME OF INSPECTION"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dob_violation_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO FUTHER ACTION NECESSARY BASED UPON PHYSICAL OBSERVATION"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ecb_violation_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Description of complaints endpoint</p>
+
+<h2 id="building-complaints">Building Complaints</h2>
+
+<blockquote>
+<p>Definition</p>
+</blockquote>
+<pre><code class="highlight plaintext">GET /api/buildings/{bin}/complaints
+</code></pre>
+
+<blockquote>
+<p>Example Request</p>
+</blockquote>
+<pre><code class="highlight shell">curl <span class="s2">"/api/buildings/12345678/complaints"</span>
+</code></pre>
+
+<blockquote>
+<p>Example Response</p>
+</blockquote>
+<pre><code class="highlight json"><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3036607"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"complaint_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3058960"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"regarding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Re: ILLEGAL PLUMBING WORK IN BASEMENT/CELLAR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66 PLUMBING WORK - ILLEGAL/NO PERMIT(ALSO SPRINKLER/STANDPIPE)"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"assigned_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"priority"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"received"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10/01/1997 11:28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"block"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 1374"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lot"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 31"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"community_board"</span><span class="p">:</span><span class="w"> </span><span class="s2">" 308"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REQ 74104 00000002257970"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_inspection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06/05/2003 - - BY BADGE # 3029"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"disposition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06/06/2003 - I2 - NO VIOLATION WARRANTED FOR COMPLAINT AT TIME OF INSPECTION"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"dob_violation_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NO FUTHER ACTION NECESSARY BASED UPON PHYSICAL OBSERVATION"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ecb_violation_num"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+          <h1 id="dob-violations">DOB Violations</h1>
+
+          <h1 id="ecb-violations">ECB Violations</h1>
 
       </div>
       <div class="dark-box">
